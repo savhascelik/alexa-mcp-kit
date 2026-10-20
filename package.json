@@ -1,0 +1,43 @@
+{
+  "name": "alexa-mcp-kit",
+  "version": "1.0.0",
+  "description": "Zero-dependency SDK, Progressive Tool Discovery, V8 Code Mode Sandbox, Adaptive 3-Mode UI Generator (Inline, Fullscreen, Voice-only), and Pre-Certification Auditor for Amazon Alexa+ MCP Apps.",
+  "license": "MIT",
+  "type": "module",
+  "main": "./src/index.mjs",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/savhascelik/alexa-mcp-kit.git"
+  },
+  "homepage": "https://github.com/savhascelik/alexa-mcp-kit#readme",
+  "exports": {
+    ".": "./src/index.mjs",
+    "./ui-shell": "./src/ui-shell.mjs",
+    "./inspector-audit": "./src/inspector-audit.mjs",
+    "./tool-discovery": "./src/tool-discovery.mjs",
+    "./codemode-sandbox": "./src/codemode-sandbox.mjs"
+  },
+  "bin": {
+    "alexa-mcp-audit": "./bin/alexa-mcp-audit.mjs"
+  },
+  "scripts": {
+    "test:phase1": "node tests/check_phase1.mjs",
+    "test:phase2": "node tests/check_phase2.mjs",
+    "test:phase3": "node tests/check_phase3.mjs",
+    "test:phase5": "node tests/check_phase5_discovery.mjs",
+    "test:phase6": "node tests/check_phase6_codemode.mjs",
+    "test": "node tests/verify_all.mjs"
+  },
+  "keywords": [
+    "alexa-plus",
+    "mcp",
+    "model-context-protocol",
+    "mcp-apps",
+    "streamable-http",
+    "addon-local-inspector",
+    "amazon"
+  ],
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
