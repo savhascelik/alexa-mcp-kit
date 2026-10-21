@@ -728,9 +728,9 @@ export class AlexaMcpServer {
     res.setHeader("Access-Control-Allow-Methods", "GET, POST, DELETE, OPTIONS");
     res.setHeader(
       "Access-Control-Allow-Headers",
-      "Content-Type, Accept, Mcp-Session-Id, Last-Event-ID"
+      "Content-Type, Accept, Mcp-Session-Id, MCP-Protocol-Version, Last-Event-ID, Authorization"
     );
-    res.setHeader("Access-Control-Expose-Headers", "Mcp-Session-Id");
+    res.setHeader("Access-Control-Expose-Headers", "Mcp-Session-Id, MCP-Protocol-Version");
 
     if (req.method === "OPTIONS") {
       res.writeHead(204);
