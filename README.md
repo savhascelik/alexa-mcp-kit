@@ -139,7 +139,9 @@ npm test
 
 ## Companion Reference Application
 
-See **[`billshield-mcp`](https://github.com/savhascelik/billshield-mcp)** for a complete 19-tool Alexa+ household financial defense & recall claim add-on built on top of `alexa-mcp-kit`.
+See **[`billshield-mcp`](https://github.com/savhascelik/billshield-mcp)** for a complete 19-tool Alexa+ household financial defense & recall claim add-on built on top of `alexa-mcp-kit`:
+- **Live Interactive Echo Show 3-Mode Sandbox:** [`https://billshield-mcp.duckdns.org/simulator`](https://billshield-mcp.duckdns.org/simulator)
+- **Live Streamable HTTP MCP Endpoint:** `https://billshield-mcp.duckdns.org/mcp`
 
 ---
 
