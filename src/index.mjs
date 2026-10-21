@@ -13,7 +13,8 @@ export const SUPPORTED_MCP_PROTOCOL_VERSIONS = Object.freeze([
   "2026-07-28",
   "2025-11-25",
   "2025-06-18",
-  "2025-03-26"
+  "2025-03-26",
+  "2024-11-05"
 ]);
 export const MCP_APP_MIME_TYPE = "text/html;profile=mcp-app";
 export const REQUIRED_DISPLAY_MODES = Object.freeze(["inline", "fullscreen", "voice-only"]);
@@ -528,11 +529,21 @@ export class AlexaMcpServer {
         };
       }
 
-      if (method === "ping") {
+      if (method === "ping" || method === "logging/setLevel") {
         return {
           jsonrpc: "2.0",
           id,
           result: {}
+        };
+      }
+
+      if (method === "prompts/list") {
+        return {
+          jsonrpc: "2.0",
+          id,
+          result: {
+            prompts: []
+          }
         };
       }
 
